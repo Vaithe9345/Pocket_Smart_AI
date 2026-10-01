@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Pocket Smart AI</title><link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header><div class="brand">💰 Pocket Smart <span>AI</span></div><p>Your Smart Budget & Recommendation Assistant</p></header>
+<main>
+<section class="cards">
+<div class="card"><small>Total Income</small><h2 id="income">₹0</h2></div>
+<div class="card"><small>Total Expenses</small><h2 id="expense">₹0</h2></div>
+<div class="card"><small>Balance</small><h2 id="balance">₹0</h2></div>
+<div class="card"><small>Monthly Budget</small><h2 id="budget">₹0</h2></div>
+</section>
+<section class="grid">
+<div class="panel">
+<h2>➕ Add Transaction</h2>
+<form id="transactionForm">
+<select id="type"><option value="expense">Expense</option><option value="income">Income</option></select>
+<select id="category"><option>Food</option><option>Travel</option><option>Shopping</option><option>Education</option><option>Bills</option><option>Entertainment</option><option>Health</option><option>Other</option></select>
+<input id="amount" type="number" min="1" step="0.01" placeholder="Amount ₹" required>
+<input id="note" placeholder="Note (optional)">
+<input id="date" type="date">
+<button>Add Transaction</button>
+</form>
+</div>
+<div class="panel">
+<h2>⚙️ Monthly Settings</h2>
+<form id="settingsForm">
+<input id="monthlyIncome" type="number" min="0" step="0.01" placeholder="Monthly income ₹">
+<input id="monthlyBudget" type="number" min="0" step="0.01" placeholder="Monthly budget ₹">
+<button>Save Settings</button>
+</form>
+</div>
+</section>
+<section class="grid">
+<div class="panel"><h2>🤖 Smart Recommendations</h2><div id="recommendations"></div></div>
+<div class="panel"><h2>📊 Spending by Category</h2><canvas id="chart"></canvas></div>
+</section>
+<section class="panel"><h2>📋 Recent Transactions</h2><div class="table-wrap"><table><thead><tr><th>Date</th><th>Type</th><th>Category</th><th>Amount</th><th>Note</th><th></th></tr></thead><tbody id="transactions"></tbody></table></div></section>
+</main>
+<footer>© 2026 Pocket Smart AI • College Project</footer>
+<script src="script.js"></script>
+</body></html>
